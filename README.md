@@ -20,6 +20,7 @@ Continue adding additional headers below this one for future weeks and future ac
 ## W3
 ### Activity 1
 Updated break-down:
+<img width="878" height="657" alt="image" src="https://github.com/user-attachments/assets/ec1351a9-455c-448b-a218-0516da796c0f" />
 
 ### Activity 2
 1. It's advantagous to use Scene Variable for the explore-to-dialogue state transitions as it allows the program to manipulate the UI within the scene itself.
