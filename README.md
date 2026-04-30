@@ -27,3 +27,35 @@ Updated break-down:
 2. The Debug.Log() nodes helped in diagnosing the issue with the endDialogue event by writing in the console that the walrus registers the cursor click, meaning the issue was with the state transition instead of the click event trigger.
 3. Set Cursor Lock State is not very relevant to my Vertical Slice being that the player is intended to be stationary thorughout the experience, similar to Papers, Please.
 4. Game State is likely relevant to my Vertical Slice in order to trigger events based on whether one of the neighbors is at the door, allowing the player to access items in the time in between, or trigger the day to end.
+
+## W4
+### Activity 1
+#### Part I
+Currently, in the playtest build there is a working dialogue system. This was the main element I wanted to focus on before playtesting, at it is probably the most crucial mechanic to introduce in the game, and likely the most versitile.
+
+As for playtesting goals, I would aim for playtesters to test whether the branching dialogue system not only works without bugs, but is fluid and immersive, even within itws limited state.
+
+#### Part II
+Giovanni Solorio
+Joshua Paxton
+Jasmine Caicedo
+
+#### Part III
+Feedback insinuated that the dialogue system worked well enough to be attached to multiple NPC, which was essentially the intended purpose behind the playtest. That said, it was recommended that I add some kind of animation to present the player speaking, especially given the lack of movement in the game itself.
+
+### Activity 2
+1. Since the NewDialogueEvent graph will simply instaitiate more reply buttons as long as responses are written under the Dialogue Node, a writer can add infinitely more diallogue and branches to the conversation without ever writing a piece of code. Thry need to simply create another Dialogue Node to continue writing lines and replies.
+2. As said previosuly, there is no limit to the number of Dialogue Nodes that the writer can create, as the NewDialogueEvent graph simply checks whether the current node has an attached reply. So long as it does, a new button would be instantiated to signal a new reply.
+3. Regenerate Nodes is required to reconfigure all available Visual Scripting nodes to be compatible with each other whenever a new package or node is added.
+
+## W5
+### Activity 1
+Creation of the Infection System:
+- Make the infection_state enum correspond to the total "favor" the player has accumulated:
+    - Introduce inheritence to the NPC class.
+    - Create an abstract class within the parent class to be manipulated by the children.
+    - Use a switch statement to set the conditions of change for infection_state depending on how much favor the player garners.
+- Change NPC appearence according to infection_state:
+    - Implement new art assets onto Unity
+    - Create a [SerializeField] to add these assets within the parent NPC class.
+    - Change the presented sprite within the afformentioned switch statement.
